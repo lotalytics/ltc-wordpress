@@ -1,6 +1,6 @@
 === Lotalytics – Lottery Results ===
 Contributors: lotalytics
-Tags: lottery, lotto, results, powerball, euromillions
+Tags: lottery results, lotto, winning numbers, draw results, lottery
 Requires at least: 6.5
 Tested up to: 7.1
 Requires PHP: 7.4
@@ -8,11 +8,26 @@ Stable tag: 0.2.0
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
-Latest lottery results and next draw dates for 50+ lotteries: blocks, shortcodes, a widget. A Lotalytics API key adds an archive and draw pages.
+Official winning numbers and next draw dates for 50+ lotteries, as blocks, shortcodes or a widget. Information only: no betting, no tickets.
 
 == Description ==
 
-Show the winning numbers of Powerball, Mega Millions, EuroMillions, Eurojackpot, Lotto 6/49, SuperEnalotto, Mega-Sena, Bonoloto and 40+ other lotteries on your site. Results update on their own after every draw.
+Readers come looking for the winning numbers the evening of every draw. This plugin puts them on your site: the latest results and the next draw date of Powerball, Mega Millions, EuroMillions, Eurojackpot, Lotto 6/49, SuperEnalotto, Mega-Sena, Bonoloto and 40+ other lotteries, kept current on their own. Add a block, pick a game, done: no account, no key, no cost.
+
+It suits local news sites, community and hobby blogs, and any site whose readers ask "what were last night's numbers?".
+
+= Information only, not gambling =
+
+The plugin publishes public facts, as announced by the official lottery operators: winning numbers, bonus numbers and draw dates. It is not a gambling product.
+
+* It does not sell tickets, take bets or wagers, or handle money of any kind.
+* It does not link to, advertise or earn commissions from lottery operators, ticket resellers or betting sites.
+* It shows no predictions, tips, "hot numbers" or systems, and never suggests that any number is more likely to be drawn.
+* It collects nothing about your visitors.
+
+Lotalytics is an independent results and statistics service. It is not affiliated with, endorsed by or connected to any lottery operator. Game names such as Powerball, Mega Millions and EuroMillions are trademarks of their owners and are used only to name the games. Always check a ticket against the official lottery's own results.
+
+= What you get =
 
 * **Two blocks**: "Lottery results" (the latest 1–5 draws) and "Next lottery draw".
 * **Shortcodes** for classic themes and page builders: `[lotalytics_results game="powerball" draws="5"]` and `[lotalytics_next_draw game="powerball"]`.
@@ -20,7 +35,7 @@ Show the winning numbers of Powerball, Mega Millions, EuroMillions, Eurojackpot,
 * **Fits your theme**: the blocks take your theme's colours, fonts and spacing; the stylesheet is tiny, only loads where results are shown, and can be turned off. Templates can be overridden from your theme (`yourtheme/lotalytics/latest-results.php`).
 * **Fast**: results are fetched by your server and cached; your pages never wait on us, and if the service is briefly unavailable the last results are shown.
 * **In your language**: English, Spanish, Portuguese, French, German and Italian. Dates follow your site's date format.
-* **No tracking**: nothing about your visitors is collected or sent.
+* **No tracking, no ads**: nothing about your visitors is collected or sent, and the plugin adds no advertising to your pages.
 
 = With a Lotalytics API key =
 
@@ -31,8 +46,6 @@ Add a key under **Settings → Lotalytics** (or define `LOTALYTICS_API_KEY` in w
 * **Pre-fetching**: after each draw the plugin refreshes the results in the background, so visitors never wait.
 
 The settings page shows your plan, its games and your usage. Near the plan's request limit the plugin caches for longer, and Site Health tells you. The free results blocks never spend your key's requests.
-
-Results are facts only: winning numbers, bonus balls and draw dates. No predictions.
 
 = External service =
 
@@ -62,6 +75,18 @@ Filters: `lotalytics_results_data` (the payload before rendering), `lotalytics_b
 
 Yes. The plugin is free, and the latest-results blocks use Lotalytics' free service, no key needed. A paid Lotalytics API plan adds the archive and a results section with a page per draw.
 
+= Is this a gambling plugin? =
+
+No. It shows public lottery results and draw dates, the same facts a newspaper prints. It sells nothing, takes no bets, links to no lottery or betting site, and makes no predictions. See "Information only, not gambling" above.
+
+= Where do the results come from? =
+
+From the official results each lottery publishes. Lotalytics collects them after every draw and checks them before they are shown. The plugin always names the draw date, so readers can compare with the official source.
+
+= Do I have to link to Lotalytics? =
+
+No. The plugin never adds a link on its own. You can turn on a small credit under the results in Settings → Lotalytics if you'd like to credit the source.
+
 = How fast do results appear after a draw? =
 
 Usually within minutes of the official results being published. The plugin checks more often around a game's draw date.
@@ -76,9 +101,9 @@ The blocks follow your theme's colours and fonts. To restyle further, override t
 
 == Screenshots ==
 
-1. The "Lottery results" block in a block theme.
-2. The block settings: game, number of draws, compact mode.
-3. Settings → Lotalytics.
+1. Results on a news site using Twenty Twenty-Five: the "Lottery results" and "Next lottery draw" blocks.
+2. The block settings in the editor: game, number of draws, title, compact mode.
+3. Settings → Lotalytics: optional API key, results section, credit link (off by default), default game.
 
 == Changelog ==
 

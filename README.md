@@ -36,3 +36,13 @@ Strings change → `dev/wp i18n make-pot wp-content/plugins/lotalytics-lottery-r
 add the new strings to `dev/translations.py`, run it, then `dev/wp i18n make-mo`
 and `dev/wp i18n make-php` on the languages folder. Once the plugin is on
 wordpress.org, translate.wordpress.org takes over and wins over these files.
+
+## Release to wordpress.org
+
+1. Bump `Version:` in the plugin header and `Stable tag:` in `readme.txt` together, add a changelog entry.
+2. Plugin Check and the PHP 7.4 lint above must be clean.
+3. `bin/build-zip.sh` → `dist/lotalytics-lottery-results-<version>.zip` (the plugin folder only).
+4. **First release only:** upload the zip at https://wordpress.org/plugins/developers/add/ from the `lotalytics` wordpress.org account and wait for review. Answer the reviewers by email from the same account.
+5. **After approval (and every later release):** SVN. Copy the plugin folder into `trunk/`, `svn cp trunk tags/<version>`, and copy `.wordpress-org/*` into the SVN `assets/` folder (icons, banners, screenshots; never inside the zip).
+
+`.wordpress-org/` holds the listing art. Screenshots are real captures of the dev site; icon and banner were rendered from HTML with the brand gradient. The listing deliberately shows result balls, not the Lotalytics die: the plugin is information-only and the art should not read as gambling.

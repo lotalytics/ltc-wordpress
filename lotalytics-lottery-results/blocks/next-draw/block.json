@@ -7,7 +7,7 @@
 	"category": "widgets",
 	"icon": "calendar-alt",
 	"description": "The date of a lottery's next scheduled draw.",
-	"keywords": [ "lottery", "lotto", "next draw", "jackpot" ],
+	"keywords": [ "lottery", "lotto", "next draw", "draw date" ],
 	"textdomain": "lotalytics-lottery-results",
 	"attributes": {
 		"game": { "type": "string", "default": "" }
