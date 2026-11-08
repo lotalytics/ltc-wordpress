@@ -27,7 +27,6 @@ class Settings {
 	 * Hooks.
 	 */
 	public static function init() {
-		add_action( 'init', array( __CLASS__, 'load_textdomain' ) );
 		add_action( 'admin_menu', array( __CLASS__, 'menu' ) );
 		add_action( 'admin_init', array( __CLASS__, 'register' ) );
 		add_action( 'admin_post_lotalytics_clear_cache', array( __CLASS__, 'clear_cache' ) );
@@ -36,14 +35,6 @@ class Settings {
 		add_action( 'add_option_' . self::KEY, array( __CLASS__, 'key_changed' ) );
 		add_action( 'update_option_' . self::KEY, array( __CLASS__, 'key_changed' ) );
 		add_filter( 'plugin_action_links_' . plugin_basename( LOTALYTICS_RESULTS_FILE ), array( __CLASS__, 'action_links' ) );
-	}
-
-	/**
-	 * Bundled translations (es, fr, pt, de, it); translate.wordpress.org ones take precedence.
-	 */
-	public static function load_textdomain() {
-		// phpcs:ignore PluginCheck.CodeAnalysis.DiscouragedFunctions.load_plugin_textdomainFound -- ships translations for six languages before translate.wordpress.org has any.
-		load_plugin_textdomain( 'lotalytics-lottery-results', false, dirname( plugin_basename( LOTALYTICS_RESULTS_FILE ) ) . '/languages' );
 	}
 
 	/**

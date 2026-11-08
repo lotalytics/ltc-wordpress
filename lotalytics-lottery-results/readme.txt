@@ -4,7 +4,7 @@ Tags: lottery results, lotto, winning numbers, draw results, lottery
 Requires at least: 6.5
 Tested up to: 7.1
 Requires PHP: 7.4
-Stable tag: 0.2.0
+Stable tag: 0.2.1
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -106,6 +106,9 @@ The blocks follow your theme's colours and fonts. To restyle further, override t
 3. Settings → Lotalytics: optional API key, results section, credit link (off by default), default game.
 
 == Changelog ==
+
+= 0.2.1 =
+* Translations are delivered by translate.wordpress.org instead of being bundled.
 
 = 0.2.0 =
 * API keys: a key field with your plan, games and usage; "Register this site" for the free plan's credit link.

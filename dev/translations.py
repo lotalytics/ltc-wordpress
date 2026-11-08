@@ -1,15 +1,16 @@
 """Seed translations for the plugin's own strings (es, fr, pt, de, it).
 
-Writes languages/<domain>-<locale>.po from the .pot; compile with
-`dev/wp i18n make-mo` and `dev/wp i18n make-php`. translate.wordpress.org
-takes over once the plugin is listed; these make all six languages complete
-on day one.
+Writes translations/<domain>-<locale>.po (repo root, NOT shipped in the zip)
+from the .pot. wordpress.org delivers plugin translations from
+translate.wordpress.org only (review 2026-11-03: no bundled files, no
+load_plugin_textdomain), so these .po files are imported there once the
+plugin is listed, by a Project Translation Editor for the plugin.
 """
 import pathlib
 import re
 
 DOMAIN = "lotalytics-lottery-results"
-LANG = pathlib.Path(__file__).resolve().parent.parent / DOMAIN / "languages"
+LANG = pathlib.Path(__file__).resolve().parent.parent / "translations"
 
 T = {
  "Lotalytics – Lottery Results": {"es": "Lotalytics – Resultados de lotería", "fr": "Lotalytics – Résultats de loterie", "pt": "Lotalytics – Resultados da lotaria", "de": "Lotalytics – Lottoergebnisse", "it": "Lotalytics – Risultati del lotto"},

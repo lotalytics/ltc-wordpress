@@ -3,7 +3,7 @@
  * Plugin Name:       Lotalytics – Lottery Results
  * Plugin URI:        https://lotalytics.com/webmasters
  * Description:       Show the latest lottery results and the next draw date for 50+ lotteries, as blocks, a shortcode or a widget. With a Lotalytics API key: a results archive and a page per draw on your site.
- * Version:           0.2.0
+ * Version:           0.2.1
  * Requires at least: 6.5
  * Requires PHP:      7.4
  * Author:            Lotalytics
@@ -11,7 +11,6 @@
  * License:           GPL-2.0-or-later
  * License URI:       https://www.gnu.org/licenses/gpl-2.0.html
  * Text Domain:       lotalytics-lottery-results
- * Domain Path:       /languages
  *
  * @package Lotalytics\Results
  */
@@ -22,7 +21,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 
-define( 'LOTALYTICS_RESULTS_VERSION', '0.2.0' );
+define( 'LOTALYTICS_RESULTS_VERSION', '0.2.1' );
 define( 'LOTALYTICS_RESULTS_FILE', __FILE__ );
 define( 'LOTALYTICS_RESULTS_DIR', plugin_dir_path( __FILE__ ) );
 define( 'LOTALYTICS_RESULTS_URL', plugin_dir_url( __FILE__ ) );
